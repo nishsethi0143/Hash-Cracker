@@ -1,14 +1,12 @@
 # Hash Cracker
-
-A simple Python hash cracker that attempts to recover the plaintext from an MD5, SHA1, or SHA256 hash using a wordlist (dictionary attack).
+A simple Python hash cracker that attempts to recover the plaintext from an <b>MD5, SHA1, SHA256, SHA224, SHA384, SHA512, BLAKE2b, BLAKE2s, SHA3_224, SHA3_256, SHA3_384 or SHA3_512</b> hash using a wordlist (dictionary attack).
 
 ## Features
-- Supports MD5, SHA1, and SHA256 hashes.
+- Supports <b>MD5, SHA1, SHA256, SHA224, SHA384, SHA512, BLAKE2b, BLAKE2s, SHA3_224, SHA3_256, SHA3_384 or SHA3_512</b> hashes.
 - Takes a hash and a wordlist file as input.
 - Prints the cracked plaintext if found.
 
 ## Usage
-
 1. Clone the repository or download the files.
 
 2. Prepare a wordlist file (`wordlist.txt`) with candidate passwords, one per line.
