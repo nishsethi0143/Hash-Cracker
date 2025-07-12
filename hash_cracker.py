@@ -15,6 +15,24 @@ def crack_hash(hash_to_crack, hash_type, wordlist_path):
                     hashed_word = hashlib.sha1(word.encode()).hexdigest()
                 elif hash_type == 'sha256':
                     hashed_word = hashlib.sha256(word.encode()).hexdigest()
+                elif hash_type == 'sha224':
+                    hashed_word = hashlib.sha224(word.encode()).hexdigest()
+                elif hash_type == 'sha384':
+                    hashed_word = hashlib.sha384(word.encode()).hexdigest()
+                elif hash_type == 'sha512':
+                    hashed_word = hashlib.sha512(word.encode()).hexdigest()
+                elif hash_type == 'blake2b':
+                    hashed_word = hashlib.blake2b(word.encode()).hexdigest()
+                elif hash_type == 'blake2s':
+                    hashed_word = hashlib.blake2s(word.encode()).hexdigest()
+                elif hash_type == 'sha3_224':
+                    hashed_word = hashlib.sha3_224(word.encode()).hexdigest()
+                elif hash_type == 'sha3_256':
+                    hashed_word = hashlib.sha3_256(word.encode()).hexdigest()
+                elif hash_type == 'sha3_384':
+                    hashed_word = hashlib.sha3_384(word.encode()).hexdigest()
+                elif hash_type == 'sha3_512':
+                    hashed_word = hashlib.sha3_512(word.encode()).hexdigest()
                 else:
                     print(f"[!] Unsupported hash type: {hash_type}")
                     return
@@ -32,6 +50,7 @@ def main():
     if len(sys.argv) != 4:
         print("Usage: python hash_cracker.py <hash> <hash_type> <wordlist>")
         print("Example: python hash_cracker.py 5d41402abc4b2a76b9719d911017c592 md5 wordlist.txt")
+        print("Supported hash types: md5, sha1, sha256, sha224, sha384, sha512, blake2b, blake2s, sha3_224, sha3_256, sha3_384, sha3_512")
         return
 
     hash_to_crack = sys.argv[1]
